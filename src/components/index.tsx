@@ -1,0 +1,11 @@
+export * from "./Logo" ;
+export * from "./Banner";
+export * from "./Contact";
+export * from "./Footer";
+export * from "./NavBar";
+export * from "./Projects";
+export * from "./Skills";
+export * from "./MailchimpForm";
+export * from "./Newsletter";
+export * from "./GoToId";
+export * from "./Icons";
