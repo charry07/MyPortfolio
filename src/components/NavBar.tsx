@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar , Nav, TabContainer } from 'react-bootstrap';
 import { Logo } from './Logo';
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -29,8 +29,8 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand='md' className={scrolled ? 'scrolled' : ''}>
-        <Container>
+      <Navbar expanded className={scrolled ? 'scrolled' : ''}>
+        <TabContainer>
           <Navbar.Brand href='/'>
             <Logo />
           </Navbar.Brand>
@@ -58,7 +58,7 @@ export const NavBar = () => {
               </HashLink>
             </span>
           </Navbar.Collapse>
-        </Container>
+        </TabContainer>
       </Navbar>
     </Router>
   );
