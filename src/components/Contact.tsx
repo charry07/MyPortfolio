@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { URL_API } from '../env';
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -54,18 +55,17 @@ export const Contact = () => {
     }
 
     // Si no hay errores, continuar con el envío del formulario
-    let response = await fetch('http://localhost:5000/contact', {
+    let response = await fetch(`${URL_API}/SendMailToMe`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formDetails),
     });
 
     setButtonText('Send');
-    let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code === 200) {
+    if (response.status === 200) {
       setStatus({ success: true, message: 'Message sent successfully' });
     } else {
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
