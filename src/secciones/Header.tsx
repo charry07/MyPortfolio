@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Navbar , Nav, Container } from 'react-bootstrap';
-import { Logo } from './Logo';
+import { Logo } from '../components/Logo';
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Icons } from '.';
+import { Icons } from '../components';
 
-export const NavBar = () => {
+export const Header = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 

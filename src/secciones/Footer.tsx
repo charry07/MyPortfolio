@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { MailchimpForm } from './MailchimpForm';
-import { Icons, Logo } from './';
+import { MailchimpForm } from '../components/MailchimpForm';
+import { Icons, Logo } from '../components';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();

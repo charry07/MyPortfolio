@@ -4,9 +4,9 @@ import headerImg from '../assets/img/header-img.svg';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { GoToId } from '.';
+import { GoToId } from '../components';
 
-export const Banner = () => {
+export const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
