@@ -41,6 +41,8 @@ export const Projects = () => {
     },
   ];
 
+  console.log(projects, ProjectCard);
+
   return (
     <section className='project' id='projects'>
       <Container>
