@@ -1,8 +1,12 @@
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import { ProjectCard } from '../components/ProjectCard';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
+import projCalendar from '../assets/img/projCalendar.png';
+import projNotes from '../assets/img/projectNotes.png';
+import projHeroes from '../assets/img/projHeroesSearch.png';
+import projSeriesPelis from '../assets/img/projSeriesPelis.png';
+import projGifSearch from '../assets/img/projGifSearch.png';
+import projPokedex from '../assets/img/projPokedex.png';
+
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -10,34 +14,40 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   const projects = [
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg1,
+      title: 'Calendario',
+      description: 'App fullStack con login para manejar eventos en un calendario (MERN) - [MongoDB,Vite,nodejs] ',
+      imgUrl: projCalendar,
+      url: 'https://calendar-7ja.pages.dev/',
     },
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg2,
+      title: 'Notas',
+      description: 'App con login en GOOGLE para manejar notas (CRUD) - [Firebase,Vite] ',
+      imgUrl: projNotes,
+      url: 'https://notes-2x1.pages.dev/',
     },
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg3,
+      title: 'Heroes',
+      description: 'App con login [Vite , APIs] ',
+      imgUrl: projHeroes,
+      url: 'https://heroes.pages.dev/',
     },
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg1,
+      title: 'Series y Peliculas',
+      description: 'App Para Buscar Series y Peliculas [Vite , APIs]',
+      imgUrl: projSeriesPelis,
+      url: 'https://charry07.github.io/Series-Peliculas/',
     },
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg2,
+      title: 'Gif-Search',
+      description: 'App Para Buscar Gifs [Vite , APIs]',
+      imgUrl: projGifSearch,
+      url: 'https://charry07.github.io/Gif-Search/',
     },
     {
-      title: 'Business Startup',
-      description: 'Design & Development',
-      imgUrl: projImg3,
+      title: 'Pokedex',
+      description: 'Mi primer projecto una pokedex con paginacion [React] ',
+      imgUrl: projPokedex,
+      url: 'https://pokemon-api-by-charry.netlify.app/',
     },
   ];
 
@@ -68,29 +78,23 @@ export const Projects = () => {
                         <Nav.Link eventKey='third'>Tab 3</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    <h1 style={{ textAlign: 'center' }}>Soon...</h1>
-                    {/* <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content> */}
+
+                    <Tab.Content id='slideInUp' className={isVisible ? 'animate__animated animate__slideInUp' : ''}>
+                      <Tab.Pane eventKey='first'>
+                        <Row>
+                          {projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey='second'>
+                        <p>Aqui iria el segundo panel de proyectos Prontooo</p>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey='third'>
+                        <p>Aqui iria el Tercer panel de proyectos Prontooo</p>
+                      </Tab.Pane>
+                    </Tab.Content>
                   </Tab.Container>
                 </div>
               )}
