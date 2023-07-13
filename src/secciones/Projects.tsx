@@ -6,6 +6,7 @@ import projHeroes from '../assets/img/projHeroesSearch.png';
 import projSeriesPelis from '../assets/img/projSeriesPelis.png';
 import projGifSearch from '../assets/img/projGifSearch.png';
 import projPokedex from '../assets/img/projPokedex.png';
+import projTesla from '../assets/img/projTesla.png';
 
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import 'animate.css';
@@ -13,6 +14,12 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
   const projects = [
+    {
+      title: 'Tesla landing page',
+      description: 'Landing page de Tesla con animaciones y responsive design [React , vite] ',
+      imgUrl: projTesla,
+      url: 'https://master--tesla-charry07.netlify.app/',
+    },
     {
       title: 'Calendario',
       description: 'App fullStack con login para manejar eventos en un calendario (MERN) - [MongoDB,Vite,nodejs] ',
@@ -37,17 +44,18 @@ export const Projects = () => {
       imgUrl: projSeriesPelis,
       url: 'https://charry07.github.io/Series-Peliculas/',
     },
-    {
-      title: 'Gif-Search',
-      description: 'App Para Buscar Gifs [Vite , APIs]',
-      imgUrl: projGifSearch,
-      url: 'https://charry07.github.io/Gif-Search/',
-    },
+
     {
       title: 'Pokedex',
       description: 'Mi primer projecto una pokedex con paginacion [React] ',
       imgUrl: projPokedex,
       url: 'https://pokemon-api-by-charry.netlify.app/',
+    },
+    {
+      title: 'Gif-Search',
+      description: 'App Para Buscar Gifs [Vite , APIs]',
+      imgUrl: projGifSearch,
+      url: 'https://charry07.github.io/Gif-Search/',
     },
   ];
 
@@ -80,14 +88,18 @@ export const Projects = () => {
                     <Tab.Content id='slideInUp' className={isVisible ? 'animate__animated animate__slideInUp' : ''}>
                       <Tab.Pane eventKey='first'>
                         <Row>
-                          {projects.map((project, index) => {
+                          {projects.slice(0, 6).map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey='second'>
-                        <p>Aqui iria el segundo panel de proyectos Prontooo</p>
+                        <Row>
+                          {projects.slice(6, 12).map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey='third'>
                         <p>Aqui iria el Tercer panel de proyectos Prontooo</p>
