@@ -1,0 +1,11 @@
+# Ignorar archivos y directorios generados por Vite
+/dist
+/node_modules
+
+# Ignorar archivos y directorios específicos
+.git
+.idea
+.vscode
+
+# Ignorar variables de entorno
+.env
