@@ -11,7 +11,7 @@ jobs:
     env: 
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        VERSION: ${{1.2.0}}
+        VERSION: 1.2.0
         
     steps:
     - name: Revisa el codigo profundamente
@@ -23,10 +23,12 @@ jobs:
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       
     - name: Contruir Imagen de Docker
-      run: docker build -t charry07/my-portfolio:${VERSION} .
+      run: docker build -t $DOCKER_USER/my-portfolio:${VERSION} .
+        docker build -t $DOCKER_USER/my-portfolio:latest .
       
     - name: Hacer push de la imagen de Docker
-      run: docker push charry07/my-portfolio:${VERSION}
+      run: docker push $DOCKER_USER/my-portfolio:${VERSION}
+        docker push $DOCKER_USER/my-portfolio:latest
     
         
       
