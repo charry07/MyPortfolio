@@ -23,11 +23,13 @@ jobs:
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       
     - name: Contruir Imagen de Docker
-      run: docker build -t $DOCKER_USER/my-portfolio:${VERSION} .
+      run: | 
+        docker build -t $DOCKER_USER/my-portfolio:${VERSION} .
         docker build -t $DOCKER_USER/my-portfolio:latest .
       
     - name: Hacer push de la imagen de Docker
-      run: docker push $DOCKER_USER/my-portfolio:${VERSION}
+      run: |
+        docker push $DOCKER_USER/my-portfolio:${VERSION}
         docker push $DOCKER_USER/my-portfolio:latest
     
         
