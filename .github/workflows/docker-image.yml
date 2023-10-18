@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Revisa el codigo profundamente
+      uses: actions/checkout@v3
+      with:
+        fetch-depyh: 0
+    - name: Inicio de sesion en Docker
+      env: 
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: echo "Iniciando Login" docker login -u $DOCKER_USER -p $DOCKER_PASSWORD echo "Finalizo Login"
+      
+    
+  
+    # - name: Build the Docker image
+    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
