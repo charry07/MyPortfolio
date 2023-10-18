@@ -11,7 +11,7 @@ jobs:
     env: 
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        VERSION: 1.2.0
+        VERSION: 1.3.1
         
     steps:
     - name: Revisa el codigo profundamente
