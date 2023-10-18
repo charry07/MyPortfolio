@@ -13,9 +13,9 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 
-
-#comando para crear la imagen en docker
+#                          LEER PRIMERO
+############ comando para crear la imagen en docker ###########
 #docker build -t my-portfolio .
 
-#comando para correr la imagen en docker
+######## comando para correr la imagen en docker ###########
 #docker run --name my-portfolio-container -dp 3000:80 my-portfolio
