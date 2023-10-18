@@ -7,6 +7,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    env: 
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        VERSION: ${{1.2.0}}
+        
     steps:
     - name: Revisa el codigo profundamente
       uses: actions/checkout@v3
@@ -14,16 +20,13 @@ jobs:
         fetch-depyh: 0
         
     - name: Inicio de sesion en Docker
-      env: 
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       
     - name: Contruir Imagen de Docker
-      run: docker build -t charry07/my-portfolio:$(date +%s) .
+      run: docker build -t charry07/my-portfolio:${VERSION} .
       
     - name: Hacer push de la imagen de Docker
-      run: docker push charry07/my-portfolio:$(date +%s)
+      run: docker push charry07/my-portfolio:${VERSION}
     
         
       
