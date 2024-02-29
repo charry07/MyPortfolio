@@ -44,11 +44,11 @@ export const Skills = () => {
       img: meter1,
     },
     {
-      name: 'Express',
+      name: 'Docker',
       img: meter2,
     },
     {
-      name: 'MongoDB',
+      name: 'Power platform',
       img: meter2,
     },
     {
@@ -74,7 +74,7 @@ export const Skills = () => {
             <div className='skill-bx wow zoomIn'>
               <h2>Skills</h2>
               <p>
-                I'm a Software Devloper FRONTEND - BACKEND<br></br> MERN | React | TypeScript | Git | Node | Next | Sharepoint API | Express | MongoDB.
+                I'm a Software Developer Fullstack | React | TypeScript | Git | Node | Next | Sharepoint API | Docker | Power platform.
               </p>
               <Carousel responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
                 {skills.map((skill, I) => (

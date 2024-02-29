@@ -15,7 +15,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 #                          LEER PRIMERO
 ############ comando para crear la imagen en docker ###########
-#docker build -t my-portfolio .
+#docker build -t my-portfolio:1.3.1 .
 
 ######## comando para correr la imagen en docker ###########
-#docker run --name my-portfolio-container -dp 3000:80 my-portfolio
+#docker run --name my-portfolio-container -dp 3000:80 my-portfolio:1.3.1
