@@ -7,6 +7,7 @@ import projSeriesPelis from '../assets/img/projSeriesPelis.png';
 import projGifSearch from '../assets/img/projGifSearch.png';
 import projPokedex from '../assets/img/projPokedex.png';
 import projTesla from '../assets/img/projTesla.png';
+import projDBZ from '../assets/img/projDBZ.png';
 
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import 'animate.css';
@@ -14,6 +15,12 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
   const projects = [
+    {
+      title: 'Dragon Ball Z - Characters',
+      description: 'App para buscar personajes de DBZ [Clojurescript , APIs]',
+      imgUrl: projDBZ,
+      url: 'https://dragon-ball-z-acharry.netlify.app/',
+    },
     {
       title: 'Tesla landing page',
       description: 'Landing page de Tesla con animaciones y responsive design [React , vite] ',
