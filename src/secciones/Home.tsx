@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import headerImg from '../assets/img/header-img.svg';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-import { GoToId } from '../components';
+import {useState, useEffect} from "react";
+import {Container, Row, Col} from "react-bootstrap";
+import headerImg from "../assets/img/header-img.svg";
+import {ArrowRightCircle} from "react-bootstrap-icons";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import {GoToId} from "../components";
 
 export const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [delta, setDelta] = useState(30 - Math.random() * 50);
-  const toRotate = ['Software Developer', 'Web Developer', 'Backend Developer'];
+  const toRotate = ["Full Stack Developer", "Software Engineer", "React Developer", "Backend Developer"];
   const period = 1000;
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const Home = () => {
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setDelta(period);
-    } else if (isDeleting && updatedText === '') {
+    } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setDelta(500);
@@ -52,20 +52,22 @@ export const Home = () => {
         <Row className='aligh-items-center'>
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
+              {({isVisible}) => (
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className='tagline'>Welcome to My Portfolio</span>
                   <h1>
-                    {`Hi! I'm Anderson Charry`}{' '}
+                    {`Hi! I'm Anderson Charry`}{" "}
                     <span className='txt-rotate' data-rotate={`${toRotate}`}>
                       <span className='wrap'>{text}</span>
                     </span>
                   </h1>
                   <p>
-                    I consider myself responsible, dynamic, punctual, honest, with a desire to improve and very willing, I have the ability and initiative to work in a team and
-                    under high pressure conditions, I learn quickly and adequately meet the objectives set by the company.
+                    Over 3 years of experience as a Full Stack Software Developer, specializing in creating efficient and scalable solutions. I have worked on both front-end and back-end projects,
+                    demonstrating skills in various technologies and agile methodologies. I consider myself a responsible, dynamic, punctual, and honest individual with a strong desire for improvement
+                    and a great willingness to take on new challenges. I possess the ability to work in a team and under high-pressure conditions, learn quickly, and meet the objectives set by the
+                    company.
                   </p>
-                  <button id='skills' onClick={() => GoToId('connect')}>
+                  <button id='skills' onClick={() => GoToId("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
                 </div>
@@ -74,8 +76,8 @@ export const Home = () => {
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? 'animate__animated animate__zoomIn' : ''}>
+              {({isVisible}) => (
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt='Header Img' />
                 </div>
               )}

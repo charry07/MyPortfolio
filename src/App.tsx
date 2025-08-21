@@ -1,6 +1,6 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Home, Header, Skills, Projects, Contact, Footer } from './components';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Home, Header, Contact, Footer, Skills, Experience, Projects} from "./components";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Home />
       <Skills />
       <Projects />
+      <Experience />
       <Contact />
       <Footer />
     </div>

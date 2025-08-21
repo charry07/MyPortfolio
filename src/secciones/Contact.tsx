@@ -84,6 +84,14 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
                   <h2>Get In Touch</h2>
+                  <div className="contact-info">
+                    <p><strong>Anderson Charry Naranjo</strong></p>
+                    <p>📍 Medellín, Antioquia, Colombia</p>
+                    <p>📧 charry072013@gmail.com</p>
+                    <p>📱 +57 314 778 1832</p>
+                    <p>💼 Available for Remote & On-site opportunities</p>
+                  </div>
+                  <br />
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className='px-1'>
