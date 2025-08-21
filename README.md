@@ -1,4 +1,4 @@
-# 🚀 Anderson Charry - Portfolio Developer
+# 🚀 Anderson Charry - Full Stack Developer Portfolio
 
 <div align="center">
 
@@ -12,7 +12,7 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
-[🌐 **Live Demo**](https://yourportfolio.vercel.app) | [📧 **Contact Me**](mailto:your.email@gmail.com) | [💼 **LinkedIn**](https://linkedin.com/in/anderson-charry)
+[🌐 **Live Demo**](https://my-portfolio-evy.pages.dev/) | [📧 **Contact Me**](mailto:charry072013@gmail.com) | [💼 **LinkedIn**](https://linkedin.com/in/charry07)
 
 </div>
 
@@ -20,23 +20,26 @@
 
 ## 📋 About This Project
 
-Welcome to my personal portfolio! This is a modern, responsive web application built with **React** and **TypeScript** that showcases my skills, projects, and experience as a developer. The portfolio features smooth animations, interactive components, and a clean, professional design.
+Welcome to my personal portfolio! This is a modern, responsive web application built with **React** and **TypeScript** that showcases my skills, projects, and experience as a **Full Stack Software Developer** with **over 4 years of experience**. The portfolio features smooth animations, interactive components, and a clean, professional design.
 
 ### 🎯 **What You'll Find Here:**
 - **About Me**: Professional background and introduction
-- **Skills**: Technical expertise and proficiency levels
-- **Projects**: Showcase of my best development work
+- **Skills**: Interactive technical expertise showcase with category filtering
+- **Projects**: Showcase of my best development work with live demos
+- **Experience**: Professional timeline and career journey
 - **Contact**: Easy ways to get in touch with me
 
 ### ✨ **Key Features:**
 - 🎨 **Modern UI/UX** with smooth animations using Animate.css
-- 📱 **Fully Responsive** design that works on all devices
+- 📱 **Fully Responsive** design with custom hamburger menu for mobile
 - 🚀 **Fast Performance** powered by Vite
 - 📧 **Contact Form** with email functionality using Nodemailer
 - 🎪 **Interactive Carousel** for project showcases
 - 🎭 **Dynamic Animations** and transitions
 - 📬 **Newsletter Subscription** integration
 - 🌟 **Professional Layout** with Bootstrap components
+- ⚙️ **Centralized Configuration** for easy content updates
+- 🏷️ **Interactive Skills** with category filtering and proficiency levels
 
 ---
 
@@ -123,24 +126,61 @@ MyPortfolio/
 │   │   ├── Logo.tsx            # Logo component
 │   │   ├── ProjectCard.tsx     # Project showcase cards
 │   │   ├── MailchimpForm.tsx   # Newsletter subscription
-│   │   └── Newsletter.tsx      # Newsletter section
+│   │   ├── Newsletter.tsx      # Newsletter section
+│   │   └── index.tsx           # Component exports
 │   ├── 📁 secciones/           # Main portfolio sections
-│   │   ├── Header.tsx          # Navigation header
+│   │   ├── Header.tsx          # Responsive navigation header
 │   │   ├── Home.tsx           # Hero/landing section
-│   │   ├── Skills.tsx         # Skills showcase
+│   │   ├── Skills.tsx         # Interactive skills showcase
 │   │   ├── Projects.tsx       # Projects gallery
+│   │   ├── Experience.tsx     # Professional experience timeline
 │   │   ├── Contact.tsx        # Contact form
 │   │   └── Footer.tsx         # Footer section
+│   ├── 📁 config/             # Configuration files
+│   │   └── portfolio.ts       # Centralized portfolio configuration
 │   ├── 📁 assets/             # Static assets
 │   │   ├── 📁 img/            # Images and icons
-│   │   └── 📁 font/           # Custom fonts
+│   │   └── 📁 font/           # Custom fonts (Centra No2)
 │   ├── 📁 helpers/            # Utility functions
-│   └── App.tsx                # Main application component
+│   │   └── GoToId.ts          # Navigation helper
+│   ├── 📁 context/            # React context (if any)
+│   ├── App.tsx                # Main application component
+│   ├── App.css               # Global styles and custom CSS
+│   └── main.tsx              # Application entry point
 ├── 📄 server.cjs              # Express server for contact form
 ├── 📄 package.json            # Dependencies and scripts
 ├── 📄 vite.config.ts          # Vite configuration
-└── 📄 dockerfile             # Docker configuration
+├── 📄 dockerfile             # Docker configuration
+├── 📄 tsconfig.json          # TypeScript configuration
+└── 📄 .env                   # Environment variables (not in repo)
 ```
+
+---
+
+## ⚙️ Centralized Configuration
+
+This portfolio uses a centralized configuration system for easy content management:
+
+### **Portfolio Configuration (`src/config/portfolio.ts`)**
+
+```typescript
+export const PORTFOLIO_CONFIG = {
+  developer: {
+    name: "Anderson Charry Naranjo",
+    yearsExperience: 4,
+    title: "Full Stack Software Developer",
+    specialization: "creating efficient and scalable solutions",
+  },
+  // ... more configuration
+};
+```
+
+### **Easy Updates:**
+- **Change experience years**: Modify `yearsExperience` in one place
+- **Update personal info**: Edit the `developer` object
+- **Modify descriptions**: Update text functions for consistency
+
+This ensures all content stays synchronized across the entire portfolio.
 
 ---
 
@@ -202,6 +242,20 @@ To enable the contact form functionality:
 
 ## 🎨 Customization
 
+### **Updating Personal Information**
+Edit `src/config/portfolio.ts` to update your personal details:
+
+```tsx
+export const PORTFOLIO_CONFIG = {
+  developer: {
+    name: "Your Name",
+    yearsExperience: 4,
+    title: "Your Title",
+    specialization: "your specialization",
+  }
+};
+```
+
 ### **Updating Project Showcase**
 Edit `src/secciones/Projects.tsx` to add your projects:
 
@@ -211,15 +265,28 @@ const projects = [
     title: "Your Project Name",
     description: "Project description",
     imgUrl: "/src/assets/img/your-project.png",
-    gitUrl: "https://github.com/yourusername/project",
-    liveUrl: "https://your-project.vercel.app"
+    url: "https://your-project.vercel.app",
+    githubUrl: "https://github.com/yourusername/project",
+    technologies: ["React", "TypeScript", "Node.js"]
   }
-  // Add more projects...
+  // projects...
 ];
 ```
 
 ### **Updating Skills**
-Modify `src/secciones/Skills.tsx` to reflect your technical skills and proficiency levels.
+Modify `src/secciones/Skills.tsx` to reflect your technical skills and proficiency levels:
+
+```tsx
+const skills: Skill[] = [
+  {
+    name: "React",
+    level: 90,
+    category: "frontend",
+    description: "Building interactive UIs with hooks and modern patterns"
+  }
+  // Add more skills...
+];
+```
 
 ### **Changing Theme Colors**
 Update CSS variables in `src/App.css` to customize the color scheme.
@@ -246,10 +313,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/anderson-charry)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/charry07)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/charry07)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://yourportfolio.vercel.app)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://my-portfolio-evy.pages.dev)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:charry072013@gmail.com)
 
 </div>
 
