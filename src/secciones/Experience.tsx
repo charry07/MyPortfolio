@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Briefcase, Calendar, GeoAlt } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { getExperiencePageText } from '../config/portfolio';
 
 interface ExperienceItem {
   id: number;
@@ -81,8 +82,7 @@ export const Experience = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Professional Experience</h2>
                   <p>
-                    Over 3 years of experience as a Full Stack Software Developer, specializing in creating 
-                    efficient and scalable solutions for companies in Colombia, Bermuda, and international clients.
+                    {getExperiencePageText()}
                   </p>
                   
                   <div className="timeline">

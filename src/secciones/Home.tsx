@@ -5,6 +5,7 @@ import {ArrowRightCircle} from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import {GoToId} from "../components";
+import { getHomeExperienceText } from "../config/portfolio";
 
 export const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -62,10 +63,7 @@ export const Home = () => {
                     </span>
                   </h1>
                   <p>
-                    Over 3 years of experience as a Full Stack Software Developer, specializing in creating efficient and scalable solutions. I have worked on both front-end and back-end projects,
-                    demonstrating skills in various technologies and agile methodologies. I consider myself a responsible, dynamic, punctual, and honest individual with a strong desire for improvement
-                    and a great willingness to take on new challenges. I possess the ability to work in a team and under high-pressure conditions, learn quickly, and meet the objectives set by the
-                    company.
+                    {getHomeExperienceText()}
                   </p>
                   <button id='skills' onClick={() => GoToId("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
