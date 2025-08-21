@@ -68,6 +68,12 @@ export const Skills = () => {
       description: "Type-safe JavaScript for robust applications",
     },
     {
+      name: "JavaScript",
+      level: 90,
+      category: "frontend",
+      description: "Modern ES6+ JavaScript for web development",
+    },
+    {
       name: "Node.js",
       level: 80,
       category: "backend",
@@ -108,6 +114,12 @@ export const Skills = () => {
       level: 90,
       category: "frontend",
       description: "Modern CSS with Flexbox, Grid, and animations",
+    },
+    {
+      name: "HTML",
+      level: 95,
+      category: "frontend",
+      description: "Semantic HTML5 markup and accessibility best practices",
     },
     {
       name: "Java",
