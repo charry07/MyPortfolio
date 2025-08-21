@@ -8,6 +8,7 @@ import { Icons } from '../components';
 export const Header = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,40 +24,75 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value: any) => {
+  const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
+    setExpanded(false); // Cerrar el menú al hacer click en un enlace
+  };
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
   };
 
   return (
     <Router>
-      <Navbar expanded className={scrolled ? 'scrolled' : ''}>
+      <Navbar 
+        expand="lg" 
+        expanded={expanded}
+        className={scrolled ? 'scrolled' : ''}
+        variant="dark"
+      >
         <Container>
           <Navbar.Brand href='/'>
             <Logo />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav'>
-            <span className='navbar-toggler-icon'></span>
+          <Navbar.Toggle 
+            aria-controls='basic-navbar-nav'
+            onClick={handleToggle}
+            className="custom-toggler"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </Navbar.Toggle>
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link href='#home' className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>
+              <Nav.Link 
+                href='#home' 
+                className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('home')}
+              >
                 Home
               </Nav.Link>
-              <Nav.Link href='#skills' className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>
+              <Nav.Link 
+                href='#skills' 
+                className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('skills')}
+              >
                 Skills
               </Nav.Link>
-              <Nav.Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>
+              <Nav.Link 
+                href='#projects' 
+                className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('projects')}
+              >
                 Projects
               </Nav.Link>
-              <Nav.Link href='#experience' className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>
+              <Nav.Link 
+                href='#experience' 
+                className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} 
+                onClick={() => onUpdateActiveLink('experience')}
+              >
                 Experience
               </Nav.Link>
             </Nav>
             <span className='navbar-text'>
               <Icons />
               <HashLink to='#connect'>
-                <button className='vvd'>
-                  <span>Let’s Connect</span>
+                <button 
+                  className='vvd'
+                  onClick={() => setExpanded(false)}
+                >
+                  <span>Let's Connect</span>
                 </button>
               </HashLink>
             </span>
