@@ -12,7 +12,7 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
-[🌐 **Live Demo**](https://my-portfolio-evy.pages.dev/) | [📧 **Contact Me**](mailto:charry072013@gmail.com) | [💼 **LinkedIn**](https://linkedin.com/in/charry07)
+[🌐 **Live Page link**](https://www.anderson-charry.dev/) | [📧 **Contact Me**](mailto:charry072013@gmail.com) | [💼 **LinkedIn**](https://linkedin.com/in/charry07)
 
 </div>
 
