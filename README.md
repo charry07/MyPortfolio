@@ -20,7 +20,7 @@
 
 ## 📋 About This Project
 
-Welcome to my personal portfolio! This is a modern, responsive web application built with **React** and **TypeScript** that showcases my skills, projects, and experience as a **Full Stack Software Developer** with **over 4 years of experience**. The portfolio features smooth animations, interactive components, and a clean, professional design.
+Welcome to my personal portfolio! This is a modern, responsive web application built with **React** and **TypeScript** that showcases my skills, projects, and experience as a **Java Backend Developer** with **over 5 years of experience**. The portfolio features smooth animations, interactive components, and a clean, professional design.
 
 ### 🎯 **What You'll Find Here:**
 - **About Me**: Professional background and introduction
@@ -167,9 +167,9 @@ This portfolio uses a centralized configuration system for easy content manageme
 export const PORTFOLIO_CONFIG = {
   developer: {
     name: "Anderson Charry Naranjo",
-    yearsExperience: 4,
-    title: "Full Stack Software Developer",
-    specialization: "creating efficient and scalable solutions",
+    yearsExperience: 5,
+    title: "Java Backend Developer",
+    specialization: "building reliable, scalable backend services and system integrations",
   },
   // ... more configuration
 };

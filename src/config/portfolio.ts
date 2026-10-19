@@ -5,9 +5,9 @@ export const PORTFOLIO_CONFIG = {
   // Información personal
   developer: {
     name: "Anderson Charry Naranjo",
-    yearsExperience: 4,
+    yearsExperience: 5,
     title: "Full Stack Software Developer",
-    specialization: "creating efficient and scalable solutions",
+    specialization: "building reliable, scalable backend services and system integrations",
   },
 
   // Textos reutilizables
@@ -20,7 +20,7 @@ export const PORTFOLIO_CONFIG = {
         return `${baseText} for companies in Colombia, Bermuda, and international clients.`;
       }
 
-      return `${baseText}. I have worked on both front-end and back-end projects, demonstrating skills in various technologies and agile methodologies. I consider myself a responsible, dynamic, punctual, and honest individual with a strong desire for improvement and a great willingness to take on new challenges. I possess the ability to work in a team and under high-pressure conditions, learn quickly, and meet the objectives set by the company.`;
+      return `${baseText}. I am currently focused on Java backend development for enterprise insurance platforms and AML compliance solutions, with prior front-end and full stack experience, demonstrating skills in various technologies and agile methodologies. I consider myself a responsible, dynamic, punctual, and honest individual with a strong desire for improvement and a great willingness to take on new challenges. I possess the ability to work in a team and under high-pressure conditions, learn quickly, and meet the objectives set by the company.`;
     },
   },
 

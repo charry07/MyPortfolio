@@ -21,11 +21,27 @@ export const Experience = () => {
     {
       id: 1,
       company: "Kane Solutions",
-      position: "Software Developer",
-      location: "Hamilton, Bermuda (Remote)",
-      startDate: "Sep 2024",
+      position: "Java Backend Developer",
+      location: "Remote",
+      startDate: "Apr 2026",
       endDate: "Present",
       current: true,
+      description: [
+        "Work on enterprise insurance technology, supporting core platform development and ongoing product improvements",
+        "Build and maintain backend services, business workflows, and system integrations",
+        "Contribute to compliance-focused initiatives, including AML (Anti-Money Laundering) processes and data validation",
+        "Collaborate across teams to deliver reliable, scalable, and audit-ready solutions in a regulated environment"
+      ],
+      technologies: ["Java", "PostgreSQL", "Spring Boot", "REST API", "AML / Compliance", "Git" , "AWS"]
+    },
+    {
+      id: 2,
+      company: "Kane Solutions",
+      position: "Frontend Web Developer",
+      location: "Hamilton, Bermuda (Remote)",
+      startDate: "Sep 2024",
+      endDate: "Apr 2026",
+      current: false,
       description: [
         "Built responsive UI components using React, HTML, and CSS",
         "Developed backend features with Java, Tapestry, and Clojure Script",
@@ -37,7 +53,7 @@ export const Experience = () => {
       technologies: ["React", "Java", "Tapestry", "Clojure Script", "PostgreSQL", "Node.js", "REST API", "HTML", "CSS"]
     },
     {
-      id: 2,
+      id: 3,
       company: "Paradigma Solutions",
       position: "Software Developer",
       location: "Medellín, Antioquia, Colombia (Remote)",
@@ -54,7 +70,7 @@ export const Experience = () => {
       technologies: ["React", "TypeScript", "Node.js", "Python", "AI", "SCRUM", "Git"]
     },
     {
-      id: 3,
+      id: 4,
       company: "Freelance Projects",
       position: "Full Stack Developer",
       location: "Medellín, Colombia (Remote)",

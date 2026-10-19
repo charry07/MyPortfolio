@@ -12,7 +12,7 @@ export const Home = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(30 - Math.random() * 50);
-  const toRotate = ["Full Stack Developer", "Software Engineer", "React Developer", "Backend Developer"];
+  const toRotate = ["Full Stack Developer", "Java Backend Developer" , "Software Engineer", "React Developer", "Backend Developer"];
   const period = 1000;
 
   useEffect(() => {
